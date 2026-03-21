@@ -1,12 +1,19 @@
-# SystInternal Utilities
-_My version of SystemInternals Utilities in PowerShell._
+# DOS2PWSH
+
+## Synops
+From Windows Commands to PowerShell Commands
 
 ## Description
-Trying to develop my own version of SystemInternals with PowerShell
+
+Translate the Windows Commands line aks DOS commands to PowerShell Commands line aka cmdlets
+- One-liner syntax
+- Script syntax
+- Modular syntax
 
 ### File and Disk Utilises
 
-Get-DiskUsage
+[Get-DiskUsage](.\FileAndDiskUtilities\Get-DiskUsage)
+[Get-Whoami](.\FileAndDiskUtilities\Get-WhoAmI)
 
 ### Networking Utilities
 
