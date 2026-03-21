@@ -1,20 +1,19 @@
-# DOS2PWSH
-
-## Synops
-From Windows Commands to PowerShell Commands
+# Dos2Pwsh
 
 ## Description
 
-Translate the Windows Commands line aks DOS commands to PowerShell Commands line aka cmdlets
+Translate the Windows Command-lines aka DOS commands to Windows PowerShell Command-lines aka cmdlets
 - One-liner syntax
 - Script syntax
 - Modular syntax
 
 ### File and Disk Utilises
 
-[Get-DiskUsage](.\FileAndDiskUtilities\Get-DiskUsage)
-[Get-Whoami](.\FileAndDiskUtilities\Get-WhoAmI)
+- [Get-DiskUsage](./FileAndDiskUtilities/Get-DiskUsage)
+- [Get-WhoAmI](./FileAndDiskUtilities/Get-WhoamI)
 
+
+ 
 ### Networking Utilities
 
 ### Process Utilities
