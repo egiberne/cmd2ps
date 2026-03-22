@@ -1,61 +1,37 @@
 <#
     .SYNOPSIS
     View disk usage by directory
-   
-    .DESCRIPTION
-    Reports the disk space usage for the directory you specify. 
-    By default it recurses directories to show the total size of a directory and its subdirectories.
-
     .PARAMETER Path 
     The path of the directory.
-
-    .INPUT
-    None. You cannot pipe objects.
-
-    .OUTPUTS
-    None. Script does not generate outputs.
-
     .EXAMPLE
-
     PS> Get-DiskUsage -Path C:\temp
-
     .NOTES
-    None.
-
-    .LINK
-    https://learn.microsoft.com/en-us/sysinternals/downloads/du
-
-    .LINK
-    Disk Usage
- 
+    version 0.1.1 
   #>
 
-[CmdletBinding()]
-param (
-    
-    [Parameter(Mandatory=$true)]
-    [String]
-    $Path
-)
 
-$Files = Get-ChildItem -Path $Path -File -Recurse -Force
-Write-Host 'Files:          ' $Files.Count
 
-$Directories = Get-ChildItem -Path $Path -Directory -Recurse -Force
-$TotalDirectories = $Directories.Count + 1
-Write-Host 'Directories:    ' $TotalDirectories
+Write-Host "Files:          $(
+                                (Get-ChildItem -Path $args[0] -File -Recurse -Force).length
+                            )
+            "
 
-$TotalFilesSize = 0
-foreach ($File in $Files) {
+Write-Host "Directories:    $(
+                                (Get-ChildItem -Path $args[0] -Directory -Recurse -Force).length +1
+                            )
+            "
 
-    $TotalFilesSize += $file.Length
-}
+Write-Host "Size:           $(
+                                ((Get-ChildItem -Path $args[0] -File -Recurse -Force) | 
+                                ForEach-Object {$_.Length } | 
+                                Measure-Object -Sum).Sum
+                            ) bytes
+            "
 
-Write-Host 'Size:           ' $TotalFilesSize 'bytes'
-
-$FolderSize = 4096
-
-$TotalFoldersSize = ($Directories.Count + 1) * $FolderSize
-
-$TotalSize = $TotalFilesSize + $TotalFoldersSize
-Write-Host 'Total on disk:  '$TotalSize 'bytes'
+Write-Host "Total on disk:  $(
+                                ((Get-ChildItem -Path $args[0] -Directory -Recurse -Force).length +1 ) * 4096 + # Size of a empty folder 4096
+                                ((Get-ChildItem -Path $args[0] -File -Recurse -Force) | 
+                                ForEach-Object {$_.Length } | 
+                                Measure-Object -Sum).Sum
+                            ) bytes
+            "

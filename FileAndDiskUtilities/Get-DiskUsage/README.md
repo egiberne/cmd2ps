@@ -1,12 +1,12 @@
 # Get-DiskUsage
-Disk Usage (DU) close code in PowerShell
+
+Disk Usage in PowerShell Command
+
+## Description
 Reports the disk space usage for the directory you specify. 
 It recurses directories to show the total size of a directory and its subdirectories.
 
-## Introduction
-Get-DiskUsage reports the disk space for the driver you specify.
-
-## Using
+## Syntax
 
 **Usage:** `Get-DiskUsage -Path <directory>`
 
@@ -14,5 +14,7 @@ Get-DiskUsage reports the disk space for the driver you specify.
 |----|-----|
 |Path|The target directory|
 
-CSV output is formatted as:
-None.
+
+
+## Related
+[Disk Usage](https://learn.microsoft.com/en-us/sysinternals/downloads/du)

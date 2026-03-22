@@ -1,8 +1,12 @@
 # Changelog
 
+
+## [0.3.0]  2026-03-22
+feat(get-diskusage) : update
+
 ## [0.2.2]  2026-03-21
-fix(title)  : correct the title
-fix(descript) : improve the description
+fix(readme)  : correct the title
+fix(readme) : improve the description
 
 ## [0.2.1]  2026-03-21
 
