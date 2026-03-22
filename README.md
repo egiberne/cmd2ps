@@ -1,17 +1,13 @@
-# Dos2Pwsh
+# Cmd2Ps
 
 ## Description
 
-Translate the Windows Command-lines aka DOS commands to Windows PowerShell Command-lines aka cmdlets
-- One-liner syntax
-- Script syntax
-- Modular syntax
+Cmd2Ps is a repository that translates common and useful Windows command‑line (CMD|DOS) commands into their PowerShell, by leveraging cmdlets with one‑liner syntax.
 
 ### File and Disk Utilises
 
 - [Get-DiskUsage](./FileAndDiskUtilities/Get-DiskUsage)
 - [Get-WhoAmI](./FileAndDiskUtilities/Get-WhoamI)
-
 
  
 ### Networking Utilities
