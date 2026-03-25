@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.4.0]  2026-03-24
+feat(get-whoami) : update
 
 ## [0.3.0]  2026-03-22
 feat(get-diskusage) : update
