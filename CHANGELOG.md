@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.5.0]  2026-03-28
+feat(get-winver) : add new command
+
 ## [0.4.0]  2026-03-24
 feat(get-whoami) : update
 
