@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.5.1]  2026-03-28
+chore(readme): update the readme
+feat(get-winver): update the command lines
+
 ## [0.5.0]  2026-03-28
 feat(get-winver) : add new command
 

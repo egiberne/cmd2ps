@@ -8,6 +8,7 @@ Cmd2Ps is a repository that translates common and useful Windows command‑line 
 
 - [Get-DiskUsage](./FileAndDiskUtilities/Get-DiskUsage)
 - [Get-WhoAmI](./FileAndDiskUtilities/Get-WhoamI)
+- [Get-Winver](./FileAndDiskUtilities/Get-WinVer)
 
  
 ### Networking Utilities

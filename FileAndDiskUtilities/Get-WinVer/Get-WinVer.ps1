@@ -1,3 +1,6 @@
 # Find the version in the registry key
+Get-ItemProperty 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion' | select -Property DisplayVersion, LCUVer, CurrentBuild | Format-list
 
-Get-ItemProperty 'C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE' | Select -ExpandProperty VersionInfo | Select -Property ProductName, ProductVersion | Format-List
+# Find the version in the system info
+Get-ComputerInfo  -Property Osname,OsVersion, OsArchitecture | Format-list
+
